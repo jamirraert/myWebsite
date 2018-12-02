@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=0">
+	<title>about me</title>
+	<link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+			<div class="header">	
+				<div class="inner-header">
+					<div class="container">
+						<h1>MY STORY</h1>
+						<p>Live your  'LIFE' now not tomorrow</p>
+					</div>		
+				</div>
+			</div>
+		<div class="wrapper" id="wrap">
+			<div class="wrapperAll">
+				<div class="row">
+					<div class="col col1">
+						<h3>CHAN</h3>
+						<h4>About Me</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore</p>
+						<img name="chanSlider" id="chan">
+					</div>
+					<div class="col col2">
+						<h3>GRACE</h3>
+						<h4>About Her</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore</p>
+						<img name="graceSlider" id="grace">
+					</div>
+				</div>
+			<div class="container">
+				<div class="main">
+					<h3>US</h3>
+					<h4>About us</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<img name="usSlider">
+				</div>
+			</div>
+			<div class="container">
+				<div class="main2">
+					<h3>TROPS</h3>
+					<h4>Brother Sister Hood</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<img name="tropsSlider">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+			<footer>
+				COPYRIGHT &copy;2018 BY CHAN'CHAN
+			</footer>
+	<script>
+		let wrap = document.getElementById('wrap');
+		let image = [];
+		let herImage = [];
+		let usImage = [];
+		let tropsImage = [];
+		let time = 2000;
+		let i = 0;
+
+		wrap.addEventListener('mousemove', randomBackground);
+		wrap.addEventListener('mouseleave', normalBackground);
+
+		image[0] = 'img/me1.jpg';
+		image[1] = 'img/me2.jpg';
+		image[2] = 'img/me3.jpg';
+		image[3] = 'img/me4.jpg';
+		image[4] = 'img/me5.jpg';
+		image[5] = 'img/me6.jpg';
+		image[6] = 'img/me7.jpg';
+		image[7] = 'img/me8.jpg';
+		image[8] = 'img/me9.jpg';
+		image[9] = 'img/me10.jpg';
+		
+
+		herImage[0] = 'img/img1.jpg';
+		herImage[1] = 'img/img2.jpg';
+		herImage[2] = 'img/img3.jpg';
+		herImage[3] = 'img/img4.jpg';
+		herImage[4] = 'img/img5.jpg';
+		herImage[5] = 'img/img6.jpg';
+		herImage[6] = 'img/img7.jpg';
+		herImage[7] = 'img/img8.jpg';
+		herImage[8] = 'img/img9.jpg';
+		herImage[9] = 'img/img10.jpg';
+
+		usImage[0] = 'img/us1.jpg';
+		usImage[1] = 'img/us2.jpg';
+		usImage[2] = 'img/us3.jpg';
+		usImage[3] = 'img/us4.jpg';
+		usImage[4] = 'img/us5.jpg';
+		usImage[5] = 'img/us6.jpg';
+		usImage[6] = 'img/us7.jpg';
+		usImage[7] = 'img/us8.jpg';
+		usImage[8] = 'img/us9.jpg';
+		usImage[9] = 'img/us10.jpg';
+
+		tropsImage[0] = 'img/trops1.jpg';
+		tropsImage[1] = 'img/trop2.jpg';
+		tropsImage[2] = 'img/trops3.jpg';
+		tropsImage[3] = 'img/trops4.jpg';
+		tropsImage[4] = 'img/trops5.jpg';
+		tropsImage[5] = 'img/trops6.jpg';
+		tropsImage[6] = 'img/trops7.jpg';
+		tropsImage[7] = 'img/trops8.jpg';
+		tropsImage[8] = 'img/trops9.jpg';
+		tropsImage[9] = 'img/trops10.jpg';
+		tropsImage[10] = 'img/trops11.jpg';
+		tropsImage[11] = 'img/trops12.jpg';
+		tropsImage[12] = 'img/trops13.jpg';
+		tropsImage[13] = 'img/trops14.jpg';
+		tropsImage[14] = 'img/trops15.jpg';
+		tropsImage[15] = 'img/trops16.jpg';
+		tropsImage[16] = 'img/trops17.jpg';
+		tropsImage[17] = 'img/trops18.jpg';
+		tropsImage[18] = 'img/trops19.jpg';
+		tropsImage[19] = 'img/trops20.jpg';
+
+
+
+		function meFunc(){
+			document.chanSlider.src = image[i];
+			document.graceSlider.src = herImage[i];
+			document.usSlider.src = usImage[i];
+			document.tropsSlider.src = tropsImage[i];
+
+			if(i < image.length -1){
+				i++;
+			}else{
+				i = 0;
+			}
+			setTimeout('meFunc()', time);
+		}
+		
+
+		window.onload = meFunc; 
+
+		function randomBackground(e){
+			document.body.style.backgroundColor = 'rgb('+e.offsetX+','+e.offsetY+', 40)';
+		}
+		function normalBackground(){
+			document.body.style.backgroundColor = '#f4f4f4';
+		}
+
+	</script>
+</body>
+</html>
